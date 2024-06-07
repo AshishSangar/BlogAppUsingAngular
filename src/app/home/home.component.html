@@ -1,0 +1,15 @@
+<h2>Blogs</h2>
+<ul class="blog-list">
+  <li *ngFor="let blog of blogs" class="blog-item">
+    <div class="blog-header" (click)="viewBlog(blog.id)">
+        <h2>{{blog.id}}  Title : {{ blog.title }}</h2>
+      <!-- <h2>Title : {{ blog.title }}</h2> -->
+    </div>
+    <p> <b>Author : </b> {{blog.author}}</p>
+    <p class="blog-content"> <b> Description : </b>{{ blog.content }}</p>
+    <div class="blog-actions">
+      <button class="edit-btn" (click)="editBlog(blog.id)">Edit</button>
+      <button class="delete-btn" (click)="deleteBlog(blog.id)">Delete</button>
+    </div>
+  </li>
+</ul>
